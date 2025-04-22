@@ -1,0 +1,26 @@
+{
+  "name": "mcp-server-demo1",
+  "version": "1.0.0",
+  "description": "MCP Time Server Demo",
+  "main": "dist/timeServer.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/timeServer.js",
+    "dev": "tsc -w & node --watch dist/timeServer.js"
+  },
+  "keywords": [
+    "mcp",
+    "typescript",
+    "time"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.2.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "typescript": "^5.4.5"
+  }
+}

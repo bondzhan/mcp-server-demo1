@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2016", // 指定 ECMAScript 目标版本
+    "module": "CommonJS", // 指定模块代码生成: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'
+    "outDir": "./dist", // 将输出结构重定向到目录
+    "rootDir": "./src", // 指定输入文件的根目录
+    "strict": true, // 启用所有严格类型检查选项
+    "esModuleInterop": true, // 通过为所有导入创建命名空间对象，实现 CommonJS 和 ES 模块之间的互操作性
+    "skipLibCheck": true, // 跳过声明文件的类型检查
+    "forceConsistentCasingInFileNames": true, // 不允许对同一文件使用大小写不一致的引用
+    "moduleResolution": "node" // 指定模块解析策略
+  },
+  "include": [
+    "src/**/*" // 包含 src 目录下的所有 TypeScript 文件
+  ],
+  "exclude": [
+    "node_modules", // 排除 node_modules 目录
+    "**/*.spec.ts" // 排除测试文件
+  ]
+}
