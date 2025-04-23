@@ -12,10 +12,16 @@ const server = new McpServer({
 // 这个工具用于获取当前时间，可以选择性地指定时区
 server.tool(
   "getCurrentTime", // 工具名称
+  "根据时区（可选）获取当前时间", // 工具描述
   {
     // 定义输入参数的 schema，使用 zod 进行校验
     // timezone 是一个可选的字符串参数
-    timezone: z.string().optional(),
+    timezone: z
+      .string()
+      .optional()
+      .describe(
+        "时区，例如 'Asia/Shanghai', 'America/New_York' 等（如不提供，则使用系统默认时区）"
+      ),
   },
   async ({ timezone }) => {
     try {
